@@ -9,7 +9,6 @@
         $resultados = mysqli_query($link , $sql );
 
         return listarCategorias();
-
     }
 
 
