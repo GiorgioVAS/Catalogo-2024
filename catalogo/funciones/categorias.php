@@ -1,6 +1,6 @@
 <?php
 
-    function listarCategorias(){
+    function listarcategorias(){
 
         $link = conectar();
 
@@ -8,7 +8,7 @@
 
         $resultados = mysqli_query($link , $sql );
 
-        return listarCategorias();
+        return $resultados;
     }
 
 

@@ -1,15 +1,15 @@
 <?php
     //require 'config/config.php';
     require 'funciones/conexion.php';
-    require 'funciones/marcas.php';
-    $marcas = listarMarcas();
+    require 'funciones/categorias.php';
+    $categorias = listarCategorias();
 
-	include 'layout/header.php';
-	include 'layout/nav.php';
+	include 'layouts/header.php';
+	include 'layouts/nav.php';
 ?>
 
     <main class="container py-4">
-        <h1>Panel de administración de marcas</h1>
+        <h1 class="text-white">Panel de administración de categorías</h1>
 
         <a href="admin.php" class="btn btn-outline-secondary my-2">
             Volver a dashboard
@@ -19,7 +19,7 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Marca</th>
+                    <th>CATEGORIAS</th>
                     <th colspan="2">
                         <a href="" class="btn btn-outline-secondary">
                             Agregar
@@ -29,11 +29,11 @@
             </thead>
             <tbody>
 <?php 
-        while( $marca = mysqli_fetch_assoc($marcas)){
+        while( $categoria = mysqli_fetch_assoc($categorias)){
 ?>
                 <tr>
-                    <td><?= $marca['idMarca'] ?></td>
-                    <td><?= $marca['mkNombre'] ?></td>
+                    <td><?= $categoria['idCategoria'] ?></td>
+                    <td><?= $categoria['catNombre'] ?></td>
                     <td>
                         <a href="" class="btn btn-outline-secondary">
                             Modificar
@@ -57,4 +57,4 @@
 
     </main>
 
-<?php  include 'layout/footer.php';  ?>
+<?php  include 'layouts/footer.php';  ?>

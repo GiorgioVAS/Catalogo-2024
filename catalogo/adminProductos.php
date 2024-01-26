@@ -5,12 +5,12 @@
     require 'funciones/productos.php';
     //Llamamos la funcion producto para que encienda el codigo
     $productos = listarProductos();
-	include 'layout/header.php';
-	include 'layout/nav.php';
+	include 'layouts/header.php';
+	include 'layouts/nav.php';
 ?>
 
     <main class="container py-4">
-        <h1>Panel de administración de productos</h1>
+        <h1 class="text-white">Panel de administración de productos</h1>
 
         <a href="admin.php" class="btn btn-outline-secondary my-2">
             Volver a dashboard
@@ -64,4 +64,4 @@
 
     </main>
 
-<?php  include 'layout/footer.php';  ?>
+<?php  include 'layouts/footer.php';  ?>
