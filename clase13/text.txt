@@ -1,0 +1,26 @@
+$_SERVER['PHP_SELF'] ---- Se envia a si mismo
+-- es como un requiere pero para otros formularios
+
+
+### ternario  variable = (condicion) ? 'true' : 'false'
+  $dato = (isset($_GET['dato]) ) ? $_GET['dato'] : '';
+
+### null coalessing | fusión de null
+
+    // $var = isset($x) ?? 'otro valor'
+$dato = $_GET['dato'] ?? '';
+
+
+
+
+
+################ expresion
+
+$var = match($comparacion){
+
+  'a' => 'letra a',
+  'b' => 'letra b',
+  'c' => 'letra c',
+  default => 'otra letra'
+};
+

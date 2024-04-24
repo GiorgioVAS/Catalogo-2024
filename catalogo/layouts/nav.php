@@ -16,16 +16,22 @@
 
 
             <div class="text-end">
-
+                <?php
+        if(!isset($_SESSION['login']) ){
+?>
                 <a href="formLogin.php" class="btn btn-outline-light me-2">Login</a>
                 <a href="formAgregarUsuario.php" class="btn btn-warning">Registro</a>
 
+                <?php
+        }else{
+?>
                 <!-- si está logueado -->
-                <!-- si está logueado -->
-                <!--
+
                 <div class="dropdown">
-                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-                        Nombre Apellido
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton2"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <?= $_SESSION['usuNombre']  ?>
+                        <?= $_SESSION['usuApellido'] ?>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
                         <li>
@@ -34,7 +40,9 @@
                                 Salir de admin
                             </a>
                         </li>
-                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
                         <li>
                             <a class="dropdown-item" href="#">
                                 <i class="bi bi-file-person"></i>
@@ -42,14 +50,16 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="formModificarClave.php">
                                 <i class="bi bi-key"></i>
                                 Modificar contraseña
                             </a>
                         </li>
                     </ul>
                 </div>
-                -->
+                <?php
+        }
+?>
                 <!-- si está logueado -->
 
             </div>

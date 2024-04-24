@@ -1,7 +1,12 @@
 <?php
     //require 'config/config.php';
+    require 'funciones/autenticacion.php';
+    autenticar();
     include 'layouts/header.php';
     include 'layouts/nav.php';
+
+    require 'funciones/autenticacion.php';
+    autenticar();
 ?>
 
     <main class="container py-4">
