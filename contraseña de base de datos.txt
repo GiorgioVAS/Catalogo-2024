@@ -1,0 +1,13 @@
+nombre:
+Giorgio
+
+user
+id21934917_giorgio
+nombre:
+id21934917_catalogo
+contraseña base de datos
+Php-70274
+
+pagina web
+
+Php-70274
